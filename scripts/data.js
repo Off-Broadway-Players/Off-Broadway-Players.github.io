@@ -25,7 +25,7 @@ class shorts {
     }
 
     createCard(){
-        let cardDiv = $(`<div></div>`).addClass("card s-card card-hidden");
+        let cardDiv = $(`<div></div>`).addClass("card crewCard card-hidden");
         cardDiv.append($("<img>").attr({
                         "src": "https://www.w3schools.com/howto/img_avatar.png"
                     }).addClass("d-block w-100 card-img-top"));
