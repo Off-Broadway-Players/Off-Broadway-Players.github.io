@@ -1,0 +1,259 @@
+/* :root {
+    --bgr: background red value
+    --bgg: background green value
+    --bgb: background blue value
+    --bgc: rgb(var(--bgr), var(--bgg), var(--bgb)); combined color
+    --bgt: rgba(var(--bgr), var(--bgg), var(--bgb), 0); hue with transparency for gradients idk
+    --cbgc: container color
+    --fadet: .5; more gradient tomfoolery
+    --fadeg: rgba(var(--bgr), var(--bgg), var(--bgb), var(--fadet));
+    --linkc: link color
+} */
+
+/* @font-face {
+    font-family: courierprime;
+    src: url(fonts/CourierPrime-Regular.ttf);
+}
+
+@font-face {
+    font-family: caslon;
+    src: url(fonts/CaslonAntique.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: caslon;
+    src: url(fonts/CaslonAntique-Bold.ttf);
+    font-weight: bold;
+    font-style:  normal;
+}
+
+@font-face {
+    font-family: caslon;
+    src: url(fonts/CaslonAntique-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: caslon;
+    src: url(fonts/CaslonAntique-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+	font-family: alice;
+	src: url(fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+	font-family: habrohead;
+	src: url(fonts/RuntimeRegular-m2Odx.otf);
+}
+
+@font-face {
+    font-family: fancyfont;
+    src: url(fonts/RusillaSerif-2OZpl.otf);
+}
+
+h1, h2, h3, h4, h5, h6, .read-more, .posted-date {
+    font-family: habrohead;
+}
+
+p, blockquote{
+	font-family: alice;
+} */
+
+.header {
+    /* --grad: 15%;
+    --gradend: 85%;
+    background-image: linear-gradient(to top, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), linear-gradient(to right, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), url(../images/IMG_0461.png); */
+
+    height: 30vw;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.title{
+    text-align: center;
+    font-size: 5rem;
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 12vw;
+    }
+    .header {
+        transform: translateZ(-1px) scale(2) translateY(-175px);
+        /* --grad: 15%;
+        --gradend: 85%;
+        background-image: linear-gradient(to top, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), linear-gradient(to right, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), url(../images/IMG_0447.png); */
+
+        height: 80vw;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: static;
+        top: 0;
+        z-index: 2;
+        transform-origin: 51.5% 0 ;
+    }
+    
+    .main {
+        perspective: 1px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+}
+
+.ctitle {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: justify;
+}
+
+body {
+    background-color: var(--bgc);
+}
+
+.content {
+    transform: translateZ(0);
+    position: relative;
+    background-color: var(--cbgc);
+    border-radius: .375rem;
+    color: var(--textc);
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+a.active{
+    background-color: var(--navc) !important;
+}
+
+a.nav-link, .input button {
+    color: var(--textc) !important;
+    transition: text-shadow 0.5s, background-color 0.5s;
+}
+
+a.nav-link:hover{
+    background-color: var(--navch);
+    text-shadow: 0 0 3px var(--textc);
+}
+
+.nav-pills a{
+    margin-left: 3px;
+}
+
+a {
+    color: var(--linkc);
+    transition: text-shadow 0.5s;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 3px var(--linkc);
+}
+
+
+.crew-card, .cast-card {
+    padding: 0;
+    transition: max-height 1s ease;
+    overflow: hidden;
+    max-height: 450px;
+    position: relative;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: transparent !important;
+    background-image: linear-gradient(to top, #ffffff, #ffffff, #ffffff44, #ffffff00);
+    padding-bottom: 5px;
+    padding-top: 40px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--bgc);
+    transition: opacity 1s linear;
+}
+
+.read-more:hover {
+    color: #666666;
+}
+
+.posted-date {
+    text-align: end;
+    font-style: italic;
+    color: var(--bgc);
+}
+
+.mobile-header {
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    font-size: 2em;
+    color: var(--textc);
+    text-shadow: 0 0 6px var(--cbgc);
+    z-index: 2;
+}
+
+#mobile-nav {
+    position: fixed;
+    background-color: var(--cbgc);
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+#mobile-nav > ul > li {
+    display: block;
+    width: 80%;
+}
+
+#mobile-nav-after{
+    height: 1em;
+    background-color: #666666;
+}
+
+#mobile-header-wrap {
+    perspective: none;
+}
+
+
+/* .cardLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    padding-left: 8px;
+    opacity: 20%;
+    transition: opacity 1s ease;
+    z-index: 5;
+}
+
+.cardLink:hover {
+    opacity: 80%;
+} */
+
+
+.source a {
+    font-style: italic;
+}
+
+/* .subheading {
+    font-size: .8em;
+    color: #ddd;
+} */
+
