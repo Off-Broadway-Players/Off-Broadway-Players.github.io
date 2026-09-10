@@ -11,8 +11,7 @@ function bufferCards (place) {
     place.prepend(cola, colb, colc);
 }
 
-
-class shorts {
+class cast {
     constructor(i, title, desc, accessed, posted, link) {
         this.index = i;
         this.title = title;
@@ -25,7 +24,40 @@ class shorts {
     }
 
     createCard(){
-        let cardDiv = $(`<div></div>`).addClass("card crewCard card-hidden");
+        let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
+        cardDiv.append($("<img>").attr({
+                        "src": "https://www.w3schools.com/howto/img_avatar.png"
+                    }).addClass("d-block w-100 card-img-top"));
+        let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
+        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append(this.title);
+        let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.desc.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
+        cbody.click(expandCard);
+        let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
+        foot.click(expandCard);
+        cardDiv.append(ctitle, cfoot, cbody, foot);
+        cardDiv.append($('<a></a>').attr({
+            "target" : "_blank",
+            "href" : this.link
+        }).addClass("cardLink bi bi-youtube"));
+        let wrapper = $("<div></div>").addClass("col").append(cardDiv);
+        return wrapper;
+    }
+}
+
+class crew {
+    constructor(i, title, desc, accessed, posted, link) {
+        this.index = i;
+        this.title = title;
+        this.desc = desc;
+        this.accessed = accessed;
+        this.posted = posted;
+        this.pDate = new Date(posted);
+        this.chron = this.pDate.valueOf();
+        this.link = link;
+    }
+
+    createCard(){
+        let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
         cardDiv.append($("<img>").attr({
                         "src": "https://www.w3schools.com/howto/img_avatar.png"
                     }).addClass("d-block w-100 card-img-top"));
@@ -47,24 +79,44 @@ class shorts {
 
 let postnum = 0;
 
-//ssssssssssssssssssssssssssssssssssssssssss
-
-Papa.parse(
-`https://docs.google.com/spreadsheets/d/e/2PACX-1vSXzA9ZHAVXMEjfUTS_JBtk5iz7X1i4auwWJHwErdmDYsuYeEcuL8h78sXxxiFvgtYWBWRt8wx8RHl2/pub?gid=1454037593&single=true&output=csv`,
-{
-    download: true,
-    complete: function(results) {
-        for(result of results.data) {
-            const shortsItem = new shorts(Number(result.index), result.title, result.description, result.accessed, result.date, result.link);
-            $("#post-container").prepend(shortsItem.createCard());
-            postnum++;
-        }
-        bufferCards($("#post-container"));
-        calcBuffer();
-    },
-    header: true
+if($("#post-container").hasClass("crew")) {
+    Papa.parse(
+    `https://docs.google.com/spreadsheets/d/e/2PACX-1vSXzA9ZHAVXMEjfUTS_JBtk5iz7X1i4auwWJHwErdmDYsuYeEcuL8h78sXxxiFvgtYWBWRt8wx8RHl2/pub?gid=1454037593&single=true&output=csv`,
+    {
+        download: true,
+        complete: function(results) {
+            for(result of results.data) {
+                const shortsItem = new crew(Number(result.index), result.title, result.description, result.accessed, result.date, result.link);
+                $("#post-container").prepend(shortsItem.createCard());
+                postnum++;
+            }
+            bufferCards($("#post-container"));
+            calcBuffer();
+        },
+        header: true
+    }
+    );
 }
-);
+
+if($("#post-container").hasClass("cast")) {
+    Papa.parse(
+    `https://docs.google.com/spreadsheets/d/e/2PACX-1vSXzA9ZHAVXMEjfUTS_JBtk5iz7X1i4auwWJHwErdmDYsuYeEcuL8h78sXxxiFvgtYWBWRt8wx8RHl2/pub?gid=1454037593&single=true&output=csv`,
+    {
+        download: true,
+        complete: function(results) {
+            for(result of results.data) {
+                const shortsItem = new cast(Number(result.index), result.title, result.description, result.accessed, result.date, result.link);
+                $("#post-container").prepend(shortsItem.createCard());
+                postnum++;
+            }
+            bufferCards($("#post-container"));
+            calcBuffer();
+        },
+        header: true
+    }
+    );
+}
+
 
 function expandCard () { 
     $(this).parent().toggleClass("card-hidden");
