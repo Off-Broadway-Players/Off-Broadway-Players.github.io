@@ -78,6 +78,7 @@ if($("#post-container").hasClass("crew")) {
         complete: function(results) {
             for(result of results.data) {
                 const crewItem = new crew(postnum, result.category, result.name, result.photo, result.role, result.bio, result.priority);
+                console.log(crewItem);
                 if(!tecCats.has(result.cat)) {
                     tecCats.set(result.cat, [crewItem]);
                 } else {
