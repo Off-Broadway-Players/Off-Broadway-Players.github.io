@@ -35,7 +35,7 @@ class cast {
         //     "target" : "_blank",
         //     "href" : this.link
         // }).addClass("cardLink bi bi-youtube"));
-        let wrapper = $("<div></div>").addClass("col pri" + this.p).append(cardDiv);
+        let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
         return wrapper;
     }
 }
@@ -63,7 +63,7 @@ class crew {
         let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
         foot.click(expandCard);
         cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
-        let wrapper = $("<div></div>").addClass("col").append(cardDiv);
+        let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
         return wrapper;
     }
 }
