@@ -79,11 +79,11 @@ if($("#post-container").hasClass("crew")) {
             for(result of results.data) {
                 const crewItem = new crew(postnum, result.category, result.name, result.photo, result.role, result.bio, result.priority);
                 console.log(crewItem);
-                if(!tecCats.has(result.cat)) {
-                    tecCats.set(result.cat, [crewItem]);
+                if(!tecCats.has(result.category)) {
+                    tecCats.set(result.category, [crewItem]);
                 } else {
-                    let temp = tecCats.get(result.cat).concat([crewItem]);
-                    tecCats.set(result.cat, temp);
+                    let temp = tecCats.get(result.category).concat([crewItem]);
+                    tecCats.set(result.category, temp);
                 }
                 // $("#post-container").prepend(shortsItem.createCard());
                 postnum++;
