@@ -4,13 +4,6 @@ const tecCats = new Map();
 const castMap = new Map();
 const alphaCastArr = [];
 
-function bufferCards (place) {
-    let cola = $("<div></div>").addClass("col h-col h-col-3 h-col-2 h-col-1");
-    let colb = $("<div></div>").addClass("col h-col h-col-2 h-col-1");
-    let colc = $("<div></div>").addClass("col h-col h-col-1");
-    place.prepend(cola, colb, colc);
-}
-
 class cast {
     constructor(i, name, photo, role, bio, p) {
         this.index = i;
@@ -24,7 +17,7 @@ class cast {
     }
 
     createCard(){
-        let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
+        let cardDiv = $(`<div></div>`).addClass("card cast-card card-hidden");
         cardDiv.append($("<img>").attr({
                         "src": "https://www.w3schools.com/howto/img_avatar.png" //add photo functionality
                     }).addClass("d-block w-100 card-img-top"));
@@ -95,8 +88,6 @@ if($("#post-container").hasClass("crew")) {
                 postnum++;
             }
             crewSetUp($("#post-container"));
-            // bufferCards($("#post-container"));
-            // calcBuffer();
         },
         header: true
     }
@@ -117,8 +108,6 @@ if($("#post-container").hasClass("cast")) {
                 postnum++;
             }
             castSetUp($("#post-container"));
-            // bufferCards($("#post-container"));
-            // calcBuffer();
         },
         header: true
     }
@@ -146,27 +135,6 @@ function expandCard () {
         } else {
             $(this).next().css("opacity", 0);
         }
-    }
-}
-
-
-function calcBuffer () {
-    let w = $(document).width();
-    let n;
-    $(".h-col").css("display", "initial");
-    if(w < 576) {
-        n = 1;
-    } else if(w < 768) {
-        n = 2;
-    } else if(w < 992) {
-        n = 3;
-    } else {
-        n = 4
-    }
-    if(postnum % n) {
-        $(".h-col-" + (n-((postnum - 1) % n))).css("display", "none");
-    } else {
-        $(".h-col").css("display", "none");
     }
 }
 
@@ -198,5 +166,4 @@ function castSetUp (place) {
     }
 }
 
-// $(window).resize(calcBuffer);
 });
