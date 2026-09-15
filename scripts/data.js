@@ -58,11 +58,11 @@ class crew {
                     }).addClass("d-block w-100 card-img-top"));
         // let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append(this.title);
-        let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.desc.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
+        let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
         let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
         foot.click(expandCard);
-        cardDiv.append(ctitle, cfoot, cbody, foot);
+        cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
         cardDiv.append($('<a></a>').attr({
             "target" : "_blank",
             "href" : this.link
