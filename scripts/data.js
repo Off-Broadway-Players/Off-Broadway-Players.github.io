@@ -25,7 +25,7 @@ class cast {
                         "src": "https://www.w3schools.com/howto/img_avatar.png" //add photo functionality
                     }).addClass("d-block w-100 card-img-top"));
         // let cfoot = $("<div></div>").addClass("card-footer role").append(this.role);
-        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append(this.name + "<br><span class=\"as\">as</span><br>" + this.role);
+        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
         let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
@@ -57,7 +57,7 @@ class crew {
                         "src": "https://www.w3schools.com/howto/img_avatar.png"//same deal
                     }).addClass("d-block w-100 card-img-top"));
         // let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
-        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append(this.title);
+        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
         let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
