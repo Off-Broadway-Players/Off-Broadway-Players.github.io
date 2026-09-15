@@ -45,6 +45,8 @@ class crew {
         this.index = i;
         this.cat = cat;
         this.name = name;
+        let arr = name.split(" ");
+        this.ln = arr.at(-1);
         this.photo = photo;
         this.role = role;
         this.bio = bio;
@@ -52,6 +54,7 @@ class crew {
     }
 
     createCard(){
+        console.log(this.ln);
         let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
         cardDiv.append($("<img>").attr({
                         "src": "https://www.w3schools.com/howto/img_avatar.png"//same deal
@@ -78,7 +81,6 @@ if($("#post-container").hasClass("crew")) {
         complete: function(results) {
             for(result of results.data) {
                 const crewItem = new crew(postnum, result.category, result.name, result.photo, result.role, result.bio, result.priority);
-                console.log(crewItem);
                 if(!tecCats.has(result.category)) {
                     tecCats.set(result.category, [crewItem]);
                 } else {
@@ -108,8 +110,8 @@ if($("#post-container").hasClass("cast")) {
                 $("#post-container").prepend(shortsItem.createCard());
                 postnum++;
             }
-            bufferCards($("#post-container"));
-            calcBuffer();
+            // bufferCards($("#post-container"));
+            // calcBuffer();
         },
         header: true
     }
@@ -163,7 +165,6 @@ function calcBuffer () {
 
 function crewSetUp (place) {
     for (const x of tecCats.keys()) {
-        console.log(x);
         place.append($("<h3></h3>").addClass("crewCat text-center").append(x));
         let cdiv = $("<div></div>").addClass("row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 pb-4 justify-content-evenly crewDiv CD-" + x);
         for(const y of tecCats.get(x)) {
