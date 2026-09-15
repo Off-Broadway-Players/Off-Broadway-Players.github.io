@@ -63,10 +63,6 @@ class crew {
         let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
         foot.click(expandCard);
         cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
-        cardDiv.append($('<a></a>').attr({
-            "target" : "_blank",
-            "href" : this.link
-        }).addClass("cardLink bi bi-youtube"));
         let wrapper = $("<div></div>").addClass("col").append(cardDiv);
         return wrapper;
     }
@@ -92,8 +88,8 @@ if($("#post-container").hasClass("crew")) {
                 postnum++;
             }
             crewSetUp($("#post-container"));
-            bufferCards($("#post-container"));
-            calcBuffer();
+            // bufferCards($("#post-container"));
+            // calcBuffer();
         },
         header: true
     }
@@ -166,6 +162,7 @@ function calcBuffer () {
 
 function crewSetUp (place) {
     for (const x of tecCats.keys()) {
+        console.log(x);
         place.append($("<h3></h3>").addClass("crewCat").append(x));
         let cdiv = $("<div></div>").addClass("crewDiv CD-" + x);
         for(const y of tecCats.get(x)) {
@@ -175,5 +172,5 @@ function crewSetUp (place) {
     }
 }
 
-$(window).resize(calcBuffer);
+// $(window).resize(calcBuffer);
 });
