@@ -1,8 +1,6 @@
 $(document).ready(function () {
-    
 
-let PostData;
-let HData;
+const tecCats = new Map();
 
 function bufferCards (place) {
     let cola = $("<div></div>").addClass("col h-col h-col-3 h-col-2 h-col-1");
@@ -12,56 +10,53 @@ function bufferCards (place) {
 }
 
 class cast {
-    constructor(i, title, desc, accessed, posted, link) {
+    constructor(i, name, photo, role, bio, p) {
         this.index = i;
-        this.title = title;
-        this.desc = desc;
-        this.accessed = accessed;
-        this.posted = posted;
-        this.pDate = new Date(posted);
-        this.chron = this.pDate.valueOf();
-        this.link = link;
+        this.name = name;
+        this.photo = photo;
+        this.role = role;
+        this.bio = bio;
+        this.p = p;
     }
 
     createCard(){
         let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
         cardDiv.append($("<img>").attr({
-                        "src": "https://www.w3schools.com/howto/img_avatar.png"
+                        "src": "https://www.w3schools.com/howto/img_avatar.png" //add photo functionality
                     }).addClass("d-block w-100 card-img-top"));
-        let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
-        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append(this.title);
-        let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.desc.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
+        // let cfoot = $("<div></div>").addClass("card-footer role").append(this.role);
+        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append(this.name + "<br><span class=\"as\">as</span><br>" + this.role);
+        let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
         let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
         foot.click(expandCard);
-        cardDiv.append(ctitle, cfoot, cbody, foot);
-        cardDiv.append($('<a></a>').attr({
-            "target" : "_blank",
-            "href" : this.link
-        }).addClass("cardLink bi bi-youtube"));
-        let wrapper = $("<div></div>").addClass("col").append(cardDiv);
+        cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
+        // cardDiv.append($('<a></a>').attr({
+        //     "target" : "_blank",
+        //     "href" : this.link
+        // }).addClass("cardLink bi bi-youtube"));
+        let wrapper = $("<div></div>").addClass("col pri" + this.p).append(cardDiv);
         return wrapper;
     }
 }
 
 class crew {
-    constructor(i, title, desc, accessed, posted, link) {
+    constructor(i, cat, name, photo, role, bio, p) {
         this.index = i;
-        this.title = title;
-        this.desc = desc;
-        this.accessed = accessed;
-        this.posted = posted;
-        this.pDate = new Date(posted);
-        this.chron = this.pDate.valueOf();
-        this.link = link;
+        this.cat = cat;
+        this.name = name;
+        this.photo = photo;
+        this.role = role;
+        this.bio = bio;
+        this.p = p;
     }
 
     createCard(){
         let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
         cardDiv.append($("<img>").attr({
-                        "src": "https://www.w3schools.com/howto/img_avatar.png"
+                        "src": "https://www.w3schools.com/howto/img_avatar.png"//same deal
                     }).addClass("d-block w-100 card-img-top"));
-        let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
+        // let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append(this.title);
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").append(this.desc.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
@@ -81,15 +76,22 @@ let postnum = 0;
 
 if($("#post-container").hasClass("crew")) {
     Papa.parse(
-    `https://docs.google.com/spreadsheets/d/e/2PACX-1vSXzA9ZHAVXMEjfUTS_JBtk5iz7X1i4auwWJHwErdmDYsuYeEcuL8h78sXxxiFvgtYWBWRt8wx8RHl2/pub?gid=1454037593&single=true&output=csv`,
+    `https://docs.google.com/spreadsheets/d/e/2PACX-1vRvraRhOE86QuO1UlDiSozzWIZuTZdyO02JtphVVvONv9wUfzlnqIM3yJmyOlbPKHDlljH2TLdJ0OlQ/pub?gid=416459707&single=true&output=csv`,
     {
         download: true,
         complete: function(results) {
             for(result of results.data) {
-                const shortsItem = new crew(Number(result.index), result.title, result.description, result.accessed, result.date, result.link);
-                $("#post-container").prepend(shortsItem.createCard());
+                const crewItem = new crew(postnum, result.cat, result.name, result.photo, result.role, result.bio, this.priority);
+                if(!tecCats.has(results.cat)) {
+                    tecCats.set(results.cat, [crewItem]);
+                } else {
+                    let temp = tecCats.get(results.cat).concat([crewItem]);
+                    tecCats.set(results.cat, temp);
+                }
+                // $("#post-container").prepend(shortsItem.createCard());
                 postnum++;
             }
+            crewSetUp($("#post-container"));
             bufferCards($("#post-container"));
             calcBuffer();
         },
@@ -100,12 +102,12 @@ if($("#post-container").hasClass("crew")) {
 
 if($("#post-container").hasClass("cast")) {
     Papa.parse(
-    `https://docs.google.com/spreadsheets/d/e/2PACX-1vSXzA9ZHAVXMEjfUTS_JBtk5iz7X1i4auwWJHwErdmDYsuYeEcuL8h78sXxxiFvgtYWBWRt8wx8RHl2/pub?gid=1454037593&single=true&output=csv`,
+    `https://docs.google.com/spreadsheets/d/e/2PACX-1vRvraRhOE86QuO1UlDiSozzWIZuTZdyO02JtphVVvONv9wUfzlnqIM3yJmyOlbPKHDlljH2TLdJ0OlQ/pub?gid=0&single=true&output=csv`,
     {
         download: true,
         complete: function(results) {
             for(result of results.data) {
-                const shortsItem = new cast(Number(result.index), result.title, result.description, result.accessed, result.date, result.link);
+                const shortsItem = new cast(postnum, result.name, result.photo, result.role, result.bio, result.priority);
                 $("#post-container").prepend(shortsItem.createCard());
                 postnum++;
             }
@@ -159,6 +161,17 @@ function calcBuffer () {
         $(".h-col-" + (n-((postnum - 1) % n))).css("display", "none");
     } else {
         $(".h-col").css("display", "none");
+    }
+}
+
+function crewSetUp (place) {
+    for (const x of tecCats.keys()) {
+        place.append($("<h3></h3>").addClass("crewCat").append(x));
+        let cdiv = $("<div></div>").addClass("crewDiv CD-" + x);
+        for(const y of tecCats.get(x)) {
+            cdiv.append(y.createCard());
+        }
+        place.append(cdiv);
     }
 }
 
