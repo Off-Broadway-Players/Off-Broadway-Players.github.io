@@ -164,8 +164,8 @@ function calcBuffer () {
 function crewSetUp (place) {
     for (const x of tecCats.keys()) {
         console.log(x);
-        place.append($("<h3></h3>").addClass("crewCat").append(x));
-        let cdiv = $("<div></div>").addClass("row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 pb-4 crewDiv CD-" + x);
+        place.append($("<h3></h3>").addClass("crewCat text-center").append(x));
+        let cdiv = $("<div></div>").addClass("row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 pb-4 justify-content-evenly crewDiv CD-" + x);
         for(const y of tecCats.get(x)) {
             cdiv.append(y.createCard());
         }
