@@ -14,6 +14,8 @@ class cast {
         this.index = i;
         this.name = name;
         this.photo = photo;
+        let arr = name.split(" ");
+        this.ln = arr.at(-1);
         this.role = role;
         this.bio = bio;
         this.p = p;
@@ -167,8 +169,17 @@ function crewSetUp (place) {
     for (const x of tecCats.keys()) {
         place.append($("<h3></h3>").addClass("crewCat text-center").append(x));
         let cdiv = $("<div></div>").addClass("row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 pb-4 justify-content-evenly crewDiv CD-" + x);
+        const alphaMap = new Map();
+        const alphaArr = [];
         for(const y of tecCats.get(x)) {
-            cdiv.append(y.createCard());
+            alphaArr.push(y.ln);
+            alphaMap.set(y.ln, y);
+            // cdiv.append(y.createCard());
+        }
+        alphaArr.sort();
+        for (const a of alphaArr) {
+            let aa = alphaMap.get(a);
+            cdiv.append(aa.createCard());
         }
         place.append(cdiv);
     }
