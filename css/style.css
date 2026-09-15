@@ -66,6 +66,19 @@ p, blockquote{
 	font-family: alice;
 } */
 
+.name {
+    text-transform: capitalize;
+}
+
+.as {
+    font-size: .5em;
+    font-style: italic;
+}
+
+.role {
+    text-transform: capitalize;
+}
+
 .header {
     /* --grad: 15%;
     --gradend: 85%;
