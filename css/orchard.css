@@ -10,6 +10,6 @@
     --navc: #999999bb;
     --navch: #99999922;
     /* --bgc: rgb(var(--bgr), var(--bgg), var(--bgb)); combined color */
-    /* --bgt: rgba(var(--bgr), var(--bgg), var(--bgb), 0); hue with transparency for gradients idk
-    --fadeg: rgba(var(--bgr), var(--bgg), var(--bgb), var(--fadet)); moreeee */
+    --bgt: rgba(var(--bgr), var(--bgg), var(--bgb), 0); /* hue with transparency for gradients idk */
+    --fadeg: rgba(var(--bgr), var(--bgg), var(--bgb), var(--fadet)); /* moreeee */
 }
