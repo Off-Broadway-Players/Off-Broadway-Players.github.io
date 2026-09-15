@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
 const tecCats = new Map();
+const castMap = new Map();
+const alphaCastArr = [];
 
 function bufferCards (place) {
     let cola = $("<div></div>").addClass("col h-col h-col-3 h-col-2 h-col-1");
@@ -108,10 +110,13 @@ if($("#post-container").hasClass("cast")) {
         download: true,
         complete: function(results) {
             for(result of results.data) {
-                const shortsItem = new cast(postnum, result.name, result.photo, result.role, result.bio, result.priority);
-                $("#post-container").prepend(shortsItem.createCard());
+                const castItem = new cast(postnum, result.name, result.photo, result.role, result.bio, result.priority);
+                castMap.set(castItem.ln, castItem);
+                alphaCastArr.push(castItem.ln);
+                // $("#post-container").prepend(shortsItem.createCard());
                 postnum++;
             }
+            castSetUp($("#post-container"));
             // bufferCards($("#post-container"));
             // calcBuffer();
         },
@@ -182,6 +187,14 @@ function crewSetUp (place) {
             cdiv.append(aa.createCard());
         }
         place.append(cdiv);
+    }
+}
+
+function castSetUp (place) {
+    alphaCastArr.sort();
+    for (const a of alphaCastArr) {
+        let aa = castMap.get(a);
+        place.append(aa.createCard());
     }
 }
 
