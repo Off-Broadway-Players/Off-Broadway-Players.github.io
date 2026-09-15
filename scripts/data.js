@@ -77,7 +77,7 @@ if($("#post-container").hasClass("crew")) {
         download: true,
         complete: function(results) {
             for(result of results.data) {
-                const crewItem = new crew(postnum, result.cat, result.name, result.photo, result.role, result.bio, this.priority);
+                const crewItem = new crew(postnum, result.category, result.name, result.photo, result.role, result.bio, result.priority);
                 if(!tecCats.has(result.cat)) {
                     tecCats.set(result.cat, [crewItem]);
                 } else {
