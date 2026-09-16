@@ -7,5 +7,4 @@
     --bgt: #aaaaaa00; /*same hex code + 00*/
     --navc: #999999bb;
     --navch: #99999922;
-    --fadeg: rgba(var(--bgr), var(--bgg), var(--bgb), var(--fadet)); /* moreeee */
 }
