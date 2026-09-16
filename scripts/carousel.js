@@ -5,7 +5,7 @@ $(document).ready(function () {
             download: true,
             complete: function (results) {
                 console.log(results);
-                for(let i = 0; i < results.length; i++) {
+                for(let i = 0; i < results.data[0].length; i++) {
                     let div = $("<div></div>").addClass("carousel-item").append($("<img>").attr("src", results[0][i]).addClass("d-block w-100"));
                     if (i == 0) {
                         div.addClass("active");
