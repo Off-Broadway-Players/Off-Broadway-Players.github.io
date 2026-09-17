@@ -29,12 +29,12 @@
 }
 @font-face {
     font-family: daveau;
-    src: url(./fonts/DaveauLight.otf);
+    src: url(./fonts/DAVeau-Light.woff);
     font-style: normal;
 }
 @font-face {
     font-family: daveau;
-    src: url(./fonts/daveau-lightitalic-webfont.woff);
+    src: url(./fonts/daveau-lightitalic.woff);
     font-style: italic;
 }
 @font-face {
