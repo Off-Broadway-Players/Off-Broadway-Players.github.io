@@ -1,12 +1,12 @@
 :root {
-    --cbgc: #777777;
+    --cbgc: #d08178; /*content bg color*/
     --fadet: .5;
     --linkc: #e8ce8e;
     --textc: #ffffff;
-    --bgc: #aaaaaa;
-    --bgt: #aaaaaa00; /*same hex code + 00*/
-    --navc: #999999bb;
-    --navch: #99999922;
+    --bgc: #d6ae83; /*outer background color*/
+    --bgt: #f9d9d900; /*same hex code + 00*/
+    --navc: #999999bb; /*nav color*/
+    --navch: #99999922; /*nav color on hover*/
 }
 
 @font-face {
@@ -78,6 +78,12 @@
     font-style: italic;
 }
 
-/* .obpHead, .authorHead {
-    font-family: ;
-} */
+.obpHead, .authorHead {
+    font-family: rosehot, Georgia, serif;
+    font-style: italic;
+}
+
+p {
+    font-family: Georgia, serif;
+    font-family: rosehot, Georgia, serif;
+}
