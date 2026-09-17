@@ -63,6 +63,21 @@
 }
 
 .fonttest {
+    /* font-family: daveau, regalia, serif; */
+    font-family: ambrosia;
+    font-family: bocklin;
+    font-family: boecklinu;
+    font-family: merival;
+    font-family: rosehot;
+    font-family: thaloria;
+    font-style: italic;
+}
+
+.title {
     font-family: daveau, regalia, serif;
     font-style: italic;
 }
+
+/* .obpHead, .authorHead {
+    font-family: ;
+} */
