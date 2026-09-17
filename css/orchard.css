@@ -29,26 +29,12 @@
 }
 @font-face {
     font-family: daveau;
-    src: url(./fonts/DaveauLight.otf) format("otf");
-    font-weight: normal;
+    src: url(./fonts/DaveauLight.otf);
     font-style: normal;
 }
 @font-face {
     font-family: daveau;
     src: url(./fonts/DaveauLightItalic-RpVjW.otf);
-    font-weight: normal;
-    font-style: italic;
-}
-@font-face {
-    font-family: daveau;
-    src: url(./fonts/DaveauRegular.otf);
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: daveau;
-    src: url(./fonts/DaveauItalic.otf);
-    font-weight: bold;
     font-style: italic;
 }
 @font-face {
@@ -77,6 +63,6 @@
 }
 
 .fonttest {
-    font-family: daveau;
+    font-family: daveau, regalia, serif;
     font-style: italic;
 }
