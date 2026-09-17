@@ -8,3 +8,76 @@
     --navc: #999999bb;
     --navch: #99999922;
 }
+
+@font-face {
+    font-family: ambrosia;
+    src: url(./fonts/AmbrosiacapCap001001-GK4g.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: bocklin;
+    src: url(./fonts/Bocklin-2E0e.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: boecklinu;
+    src: url(./fonts/Boecklinsuniverse-x3jKm.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: daveau;
+    src: url(./fonts/DaveauLight.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: daveau;
+    src: url(./fonts/DaveauLightItalic.otf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: daveau;
+    src: url(./fonts/DaveauRegular.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: daveau;
+    src: url(./fonts/DaveauItalic.otf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: merival;
+    src: url(./fonts/MerivaleroundedRegularDemo-7OEWD.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: regalia;
+    src: url(./fonts/RegaliaMonarchArtNouveau-q2OWl.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: rosehot;
+    src: url(./fonts/Rosehot.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: thaloria;
+    src: url(./fonts/Thaloria_Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fonttest {
+    font-family: daveau;
+    font-weight: lighter;
+    font-style: italic;
+}
