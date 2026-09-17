@@ -29,13 +29,13 @@
 }
 @font-face {
     font-family: daveau;
-    src: url(./fonts/DaveauLight.otf);
+    src: url(./fonts/DaveauLight.otf) format("otf");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: daveau;
-    src: url(./fonts/DaveauLightItalic.otf);
+    src: url(./fonts/DaveauLightItalic-RpVjW.otf);
     font-weight: normal;
     font-style: italic;
 }
