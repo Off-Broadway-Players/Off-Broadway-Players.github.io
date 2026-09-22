@@ -164,4 +164,5 @@ p {
 
 .read-more {
     font-family: daveau, Georgia, serif;
+    transform: rotate(180deg);
 }

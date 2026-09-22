@@ -114,21 +114,37 @@ if($("#post-container").hasClass("cast")) {
 
 function expandCard () { 
     $(this).parent().toggleClass("card-hidden"); //toggle hidden state
-    if($(this).parent().hasClass("card-hidden")) { //check for hidden state
-        $(this).parent().css("max-height", "450px"); //might change this later
-        if($(this).hasClass("read-more")) { //if clicked on 'read more'
-            $(this).css("opacity", 1); //make 'read more' text visible 
-        } else {
-            $(this).next().css("opacity", 1); 
-        }
-    } else {
-        $(this).parent().css("max-height", $(this).parent()[0].scrollHeight + "px"); //shows all
+    // if($(this).parent().hasClass("card-hidden")) { //check for hidden state
+        // $(this).parent().css("max-height", "450px"); //might change this later
+        // if($(this).hasClass("read-more")) { //if clicked on 'read more'
+        //     $(this).css("opacity", 1); //make 'read more' text visible 
+        // } else {
+        //     $(this).next().css("opacity", 1); 
+        // }
+    // } else {
+        // $(this).parent().css("max-height", $(this).parent()[0].scrollHeight + "px"); //shows all
         if($(this).hasClass("read-more")) {
-            $(this).css("opacity", 0); //make read more text invisible
+            if($(this).parent().hasClass("card-hidden")) {
+                $(this).prev().css("max-height", 0);
+            } else {
+                $(this).prev().css("max-height", "10000px");
+            }
+            let deg = $(this).css("transform");
+            console.log(deg)
+            deg = Number(deg.match(/\d+/)[0]);
+            $(this).css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
         } else {
-            $(this).next().css("opacity", 0); //make read more text invisible
+            if($(this).parent().hasClass("card-hidden")) {
+                $(this).css("max-height", 0);
+            } else {
+                $(this).css("max-height", "10000px");
+            }
+            let deg = $(this).next().css("transform");
+            deg = Number(deg.match(/\d+/)[0]);
+            console.log(deg)
+            $(this).next().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
         }
-    }
+    // }
 }
 
 function crewSetUp (place) {
