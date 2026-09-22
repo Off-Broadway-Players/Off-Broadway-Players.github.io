@@ -29,7 +29,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
         .append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>"); //'title' with name and role
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))); //bio, with \n functioning as line break, \" functioning as "
         cbody.click(expandCard); //enables the "read more" functionality
-        let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
+        let foot = $("<div></div>").addClass("card-footer read-more").append("^");
         foot.click(expandCard); //enables the "read more" functionality
         cardDiv.append(ctitle, cbody, foot);
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv); //wrapper with priority functionality
@@ -59,7 +59,7 @@ class crew {
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
-        let foot = $("<div></div>").addClass("card-footer read-more").append("^");
+        let foot = $("<div></div>").addClass("card-footer read-more").append("^").css("transform", "rotate(180deg)");
         foot.click(expandCard);
         cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
@@ -129,8 +129,8 @@ function expandCard () {
             } else {
                 $(this).prev().css("max-height", "10000px");
             }
-            // let deg = $(this).css("transform");
-            let deg = $(this).get(0)//.style.transform;
+            let deg = $(this).css("transform");
+            // let deg = $(this).get(0).style.transform;
             console.log(deg)
             deg = Number(deg.match(/\d+/)[0]);
             $(this).css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
