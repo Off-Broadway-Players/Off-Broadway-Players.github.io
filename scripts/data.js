@@ -130,7 +130,7 @@ function expandCard () {
                 $(this).prev().css("max-height", "10000px");
             }
             // let deg = $(this).css("transform");
-            let deg = $(this).children()[0]//.get(0).style.transform;
+            let deg = $(this).children()[0].style.transform;
             console.log(deg)
             deg = Number(deg.match(/\d+/)[0]);
             $(this).children("span").css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
@@ -140,7 +140,7 @@ function expandCard () {
             } else {
                 $(this).css("max-height", "10000px");
             }
-            let deg = $(this).next().children().get(0).style.transform;
+            let deg = $(this).next().children()[0].style.transform;
             deg = Number(deg.match(/\d+/)[0]);
             console.log(deg)
             $(this).next().children().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
