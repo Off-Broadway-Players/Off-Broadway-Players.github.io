@@ -130,9 +130,9 @@ function expandCard () {
                 $(this).prev().css("max-height", "10000px");
             }
             // let deg = $(this).css("transform");
-            let deg = this.style.transform;
+            let deg = this;
             console.log(deg)
-            deg = Number(deg.match(/\d+/)[0]);
+            // deg = Number(deg.match(/\d+/)[0]);
             $(this).css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
         } else {
             if($(this).parent().hasClass("card-hidden")) {
