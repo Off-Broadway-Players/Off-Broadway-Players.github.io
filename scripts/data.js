@@ -130,20 +130,20 @@ function expandCard () {
                 $(this).prev().css("max-height", "10000px");
             }
             // let deg = $(this).css("transform");
-            let deg = $(this).children().first().get(0).style.transform;
+            let deg = $(this).children("span").get(0).style.transform;
             console.log(deg)
             deg = Number(deg.match(/\d+/)[0]);
-            $(this).children().first().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
+            $(this).children("span").css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
         } else {
             if($(this).parent().hasClass("card-hidden")) {
                 $(this).css("max-height", 0);
             } else {
                 $(this).css("max-height", "10000px");
             }
-            let deg = $(this).next().children().first().get(0).style.transform;
+            let deg = $(this).next().children("span").get(0).style.transform;
             deg = Number(deg.match(/\d+/)[0]);
             console.log(deg)
-            $(this).next().children().first().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
+            $(this).next().children("span").css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
         }
     // }
 }
