@@ -59,7 +59,7 @@ class crew {
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
-        let foot = $("<div></div>").addClass("card-footer read-more").append("read more");
+        let foot = $("<div></div>").addClass("card-footer read-more").append("^");
         foot.click(expandCard);
         cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
