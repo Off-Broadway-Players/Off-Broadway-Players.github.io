@@ -1,9 +1,9 @@
 :root {
-    --cbgc: #d08178; /*content bg color*/
+    --cbgc: #ffffff; /*content bg color*/
     --fadet: .5;
     --linkc: #e8ce8e;
-    --textc: #ffffff;
-    --bgc: #d6ae83; /*outer background color*/
+    --textc: #2d1308;
+    --bgc: #ffbebc; /*outer background color*/
     --bgt: #f9d9d900; /*same hex code + 00*/
     --navc: #999999bb; /*nav color*/
     --navch: #99999922; /*nav color on hover*/
@@ -83,7 +83,77 @@
     font-style: italic;
 }
 
+.obpHead {
+    font-size: 5px;
+}
+
 p {
     font-family: Georgia, serif;
     font-family: rosehot, Georgia, serif;
+}
+
+.content {
+    border: 8px solid var(--textc);
+    border-radius: 50vw 50vw 5px 5px !important;
+}
+
+
+
+#headSVG {
+    width: calc(100vw - 3rem - 8px);
+    height: calc(100vw - 3rem - 8px);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+@media (min-width: 576px) {
+    .content{
+        border-radius: 270px 270px 5px 5px!important;
+    }
+    #headSVG {
+        width: 524px;
+        height: 524px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content{
+        border-radius: 360px 360px 5px 5px!important;
+    }
+    #headSVG {
+        width: 704px;
+        height: 704px;
+    }
+}
+
+@media (min-width: 992px) {
+    .content{
+        border-radius: 480px 480px 5px 5px!important;
+    }
+    #headSVG {
+        width: 944px;
+        height: 944px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content{
+        border-radius: 570px 570px 5px 5px!important;
+    }
+    #headSVG {
+        width: 1124px;
+        height: 1124px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .content{
+        border-radius: 660px 660px 5px 5px!important;
+    }
+    #headSVG {
+        width: 1304px;
+        height: 1304px;
+    }
 }

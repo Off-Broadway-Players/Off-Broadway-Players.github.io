@@ -1,70 +1,3 @@
-/* :root {
-    --bgr: background red value
-    --bgg: background green value
-    --bgb: background blue value
-    --bgc: rgb(var(--bgr), var(--bgg), var(--bgb)); combined color
-    --bgt: rgba(var(--bgr), var(--bgg), var(--bgb), 0); hue with transparency for gradients idk
-    --cbgc: container color
-    --fadet: .5; more gradient tomfoolery
-    --fadeg: rgba(var(--bgr), var(--bgg), var(--bgb), var(--fadet));
-    --linkc: link color
-} */
-
-/* @font-face {
-    font-family: courierprime;
-    src: url(fonts/CourierPrime-Regular.ttf);
-}
-
-@font-face {
-    font-family: caslon;
-    src: url(fonts/CaslonAntique.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: caslon;
-    src: url(fonts/CaslonAntique-Bold.ttf);
-    font-weight: bold;
-    font-style:  normal;
-}
-
-@font-face {
-    font-family: caslon;
-    src: url(fonts/CaslonAntique-Italic.ttf);
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: caslon;
-    src: url(fonts/CaslonAntique-BoldItalic.ttf);
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-	font-family: alice;
-	src: url(fonts/Alice-Regular.ttf);
-}
-
-@font-face {
-	font-family: habrohead;
-	src: url(fonts/RuntimeRegular-m2Odx.otf);
-}
-
-@font-face {
-    font-family: fancyfont;
-    src: url(fonts/RusillaSerif-2OZpl.otf);
-}
-
-h1, h2, h3, h4, h5, h6, .read-more, .posted-date {
-    font-family: habrohead;
-}
-
-p, blockquote{
-	font-family: alice;
-} */
 
 .name {
     text-transform: capitalize;
@@ -82,8 +15,9 @@ p, blockquote{
 .header {
     --grad: 15%;
     --gradend: 85%;
-    background-image: linear-gradient(to top, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), linear-gradient(to right, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), url(../images/header.png);
-    /* background-image: url(../images/header.png); without gradients*/
+    /* background-image: linear-gradient(to top, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), linear-gradient(to right, var(--bgc) 0%, var(--bgt) var(--grad) var(--gradend), var(--bgc) 100%), url(../images/header.png); */
+    /* without gradients */
+    background-image: url(https://www.muchafoundation.org/media//w620h560/lithograph/L125_Times_of_the_Day_Morning_Awakening.jpg); 
 
     height: 30vw;
 
@@ -95,7 +29,7 @@ p, blockquote{
 
 .title{
     text-align: center;
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 @media (max-width: 576px) {
