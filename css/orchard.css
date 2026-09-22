@@ -73,7 +73,7 @@
     font-style: italic;
 }
 
-.title, .ctitle {
+.title, .ctitle, .crewCat{
     font-family: daveau, regalia, serif;
     font-style: italic;
 }
@@ -159,5 +159,5 @@ p {
 }
 
 .ctitle{
-    font-size: 1em;
+    font-size: 8em;
 }
