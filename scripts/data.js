@@ -59,7 +59,7 @@ class crew {
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"')));
         cbody.click(expandCard);
-        let foot = $("<div></div>").addClass("card-footer read-more").append("^").css("transform", "rotate(180deg)");
+        let foot = $("<div></div>").addClass("card-footer read-more").append("<span>^</span>").css("transform", "rotate(180deg)");
         foot.click(expandCard);
         cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
@@ -130,20 +130,20 @@ function expandCard () {
                 $(this).prev().css("max-height", "10000px");
             }
             // let deg = $(this).css("transform");
-            let deg = $(this).get(0).style.transform;
+            let deg = $(this).children().first().get(0).style.transform;
             console.log(deg)
             deg = Number(deg.match(/\d+/)[0]);
-            $(this).css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
+            $(this).children().first().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
         } else {
             if($(this).parent().hasClass("card-hidden")) {
                 $(this).css("max-height", 0);
             } else {
                 $(this).css("max-height", "10000px");
             }
-            let deg = $(this).next().css("transform");
+            let deg = $(this).next().children().first().get(0).style.transform;
             deg = Number(deg.match(/\d+/)[0]);
             console.log(deg)
-            $(this).next().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
+            $(this).next().children().first().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
         }
     // }
 }
