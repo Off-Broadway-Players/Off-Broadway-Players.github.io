@@ -174,7 +174,6 @@ p {
 .card-hidden .card-body {
     padding-top: 0;
     padding-bottom: 0;
-    max-height: 0;
 }
 
 .card-body {
