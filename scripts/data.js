@@ -166,6 +166,8 @@ function crewSetUp (place) {
         }
         place.append(cdiv); //bop it right in there
     }
+    $(".crew-card").css({"border-top-right-radius": $(".crew-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".crew-card").innerWidth() / 2 + 'px'});
+    
 }
 
 function castSetUp (place) {
@@ -174,8 +176,11 @@ function castSetUp (place) {
         let aa = castMap.get(a);
         place.append(aa.createCard());
     }
+    $(".cast-card").css({"border-top-right-radius": $(".cast-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".cast-card").innerWidth() / 2 + 'px'});
 }
+
 $(window).resize(function () { 
-    $(".crew-card").css({"border-top-right-radius": $(".crew-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".crew-card").innerWidth() / 2 + 'px'})
+    $(".crew-card").css({"border-top-right-radius": $(".crew-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".crew-card").innerWidth() / 2 + 'px'});
+    $(".cast-card").css({"border-top-right-radius": $(".cast-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".cast-card").innerWidth() / 2 + 'px'});
 });
 });
