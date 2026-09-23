@@ -184,3 +184,10 @@ p {
 .flippy {
     transform: scaleY(-1);
 }
+
+.ccol {
+    background-image: url("../images/border.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
