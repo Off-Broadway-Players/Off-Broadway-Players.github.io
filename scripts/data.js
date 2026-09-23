@@ -127,7 +127,7 @@ function expandCard () {
             if($(this).parent().hasClass("card-hidden")) {
                 $(this).prev().css("max-height", 0);
             } else {
-                $(this).prev().css("max-height", $(this).prev()[0].scrollHeight + "px");
+                $(this).prev().css("max-height", ($(this).prev()[0].scrollHeight + $(this).prev().prev()[0].scrollHeight) + "px");
             }
             // let deg = $(this).css("transform");
             let deg = $(this).children()[0].style.transform;
