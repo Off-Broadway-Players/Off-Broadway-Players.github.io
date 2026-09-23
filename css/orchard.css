@@ -166,7 +166,16 @@ p {
     font-family: daveau, Georgia, serif;
 }
 
-.read-more span{
-    transition: transform 1s linear;
+.read-more span {
+    transition: transform 0.5s linear;
     display: block;
+}
+
+.card-hidden .card-body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.card-body {
+    transition: padding-top .5s linear, padding-bottom .5s linear;
 }
