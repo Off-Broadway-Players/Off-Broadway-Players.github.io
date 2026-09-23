@@ -27,7 +27,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
         // let cfoot = $("<div></div>").addClass("card-footer role").append(this.role); //dw about this shhh
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center")
         .append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>"); //'title' with name and role
-        let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))); //bio, with \n functioning as line break, \" functioning as "
+        let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))).css("max-height", 0); //bio, with \n functioning as line break, \" functioning as "
         cbody.click(expandCard); //enables the "read more" functionality
         let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>"));
         foot.click(expandCard); //enables the "read more" functionality
