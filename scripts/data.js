@@ -22,14 +22,14 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
     createCard(){
         let cardDiv = $(`<div></div>`).addClass("card cast-card card-hidden");
         cardDiv.append($("<img>").attr({
-                        "src": "https://www.w3schools.com/howto/img_avatar.png" //add photo functionality -> "src": this.photo
-                    }).addClass("d-block w-100 card-img-top"));
+            "src": "https://www.w3schools.com/howto/img_avatar.png" //add photo functionality -> "src": this.photo
+        }).addClass("d-block w-100 card-img-top"));
         // let cfoot = $("<div></div>").addClass("card-footer role").append(this.role); //dw about this shhh
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center")
         .append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>"); //'title' with name and role
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))); //bio, with \n functioning as line break, \" functioning as "
         cbody.click(expandCard); //enables the "read more" functionality
-        let foot = $("<div></div>").addClass("card-footer read-more").append("^");
+        let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>"));
         foot.click(expandCard); //enables the "read more" functionality
         cardDiv.append(ctitle, cbody, foot);
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv); //wrapper with priority functionality
