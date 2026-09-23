@@ -127,7 +127,7 @@ function expandCard () {
             if($(this).parent().hasClass("card-hidden")) {
                 $(this).prev().css("max-height", 0);
             } else {
-                $(this).prev().css("max-height", "10000px");
+                $(this).prev().css("max-height", $(this).prev().scrollHeight + "px");
             }
             // let deg = $(this).css("transform");
             let deg = $(this).children()[0].style.transform;
@@ -138,7 +138,7 @@ function expandCard () {
             if($(this).parent().hasClass("card-hidden")) {
                 $(this).css("max-height", 0);
             } else {
-                $(this).css("max-height", "10000px");
+                $(this).css("max-height", $(this).scrollHeight + "px");
             }
             let deg = $(this).next().children()[0].style.transform;
             deg = Number(deg.match(/\d+/)[0]);
