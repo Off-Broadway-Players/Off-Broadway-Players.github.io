@@ -32,7 +32,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
         let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>"));
         foot.click(expandCard); //enables the "read more" functionality
         cardDiv.append(ctitle, cbody, foot);
-        let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv); //wrapper with priority functionality
+        let wrapper = $("<div></div>").addClass("col ccol order-" + this.p).append(cardDiv); //wrapper with priority functionality
         return wrapper;
     }
 }
