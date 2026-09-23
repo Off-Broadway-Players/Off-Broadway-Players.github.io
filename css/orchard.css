@@ -177,7 +177,7 @@ p {
 }
 
 .card-body {
-    transition: padding-top .5s ease, padding-bottom .5s ease, max-height .25s ease;
+    transition: padding-top .5s ease, padding-bottom .5s ease, max-height .5s ease;
     padding-bottom: 0;
 }
 
