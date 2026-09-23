@@ -59,7 +59,7 @@ class crew {
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))).css("max-height", 0);
         cbody.click(expandCard);
-        let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>").css("transform", "rotate(180deg)"));
+        let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>"));
         foot.click(expandCard);
         cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
@@ -130,20 +130,18 @@ function expandCard () {
                 $(this).prev().css("max-height", ($(this).prev()[0].scrollHeight + $(this).prev().prev()[0].scrollHeight) + "px");
             }
             // let deg = $(this).css("transform");
-            let deg = $(this).children()[0].style.transform;
-            console.log(deg)
-            deg = Number(deg.match(/\d+/)[0]);
-            $(this).children("span").css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
+            // let deg = $(this).children()[0].style.transform;
+            // deg = Number(deg.match(/\d+/)[0]);
+            $(this).children("span").toggleClass("flippy");//.css("transform", "scaleY(" + (deg * -1) + ")"); //make read more text invisible
         } else {
             if($(this).parent().hasClass("card-hidden")) {
                 $(this).css("max-height", 0);
             } else {
                 $(this).css("max-height", $(this)[0].scrollHeight + "px");
             }
-            let deg = $(this).next().children()[0].style.transform;
-            deg = Number(deg.match(/\d+/)[0]);
-            console.log(deg)
-            $(this).next().children().css("transform", "rotate(" + (deg + 180) + "deg)"); //make read more text invisible
+            // let deg = $(this).next().children()[0].style.transform;
+            // deg = Number(deg.match(/\d+/)[0]);
+            $(this).next().children().toggleClass("flippy");//css("transform", "scaleY(" + (deg * -1) + ")"); //make read more text invisible
         }
     // }
 }
