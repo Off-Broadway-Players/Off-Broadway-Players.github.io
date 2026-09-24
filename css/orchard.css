@@ -195,3 +195,7 @@ p {
 .frameSpan {
     position: relative;
 }
+
+.pic {
+    background-image: url("https://www.w3schools.com/howto/img_avatar.png");
+}
