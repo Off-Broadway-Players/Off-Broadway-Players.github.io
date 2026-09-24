@@ -185,9 +185,13 @@ p {
     transform: scaleY(-1);
 }
 
-.ccol {
+/* .ccol {
     background-image: url("../images/border.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
+} */
+ 
+.frameSpan {
+    position: relative;
 }

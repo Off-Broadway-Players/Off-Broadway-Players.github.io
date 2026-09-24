@@ -54,7 +54,7 @@ class crew {
         let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
         cardDiv.append($("<img>").attr({
             "src": "https://www.w3schools.com/howto/img_avatar.png"//same deal
-        }).addClass("d-block w-100 card-img-top"));
+        }).addClass("d-block w-100 card-img-top"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
         // let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))).css("max-height", 0);
@@ -164,7 +164,7 @@ function crewSetUp (place) {
         }
         place.append(cdiv); //bop it right in there
     }
-    $(".crew-card").css({"border-top-right-radius": $(".crew-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".crew-card").innerWidth() / 2 + 'px'});
+    // $(".crew-card").css({"border-top-right-radius": $(".crew-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".crew-card").innerWidth() / 2 + 'px'});
     
 }
 
@@ -174,11 +174,11 @@ function castSetUp (place) {
         let aa = castMap.get(a);
         place.append(aa.createCard());
     }
-    $(".cast-card").css({"border-top-right-radius": $(".cast-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".cast-card").innerWidth() / 2 + 'px'});
+    // $(".cast-card").css({"border-top-right-radius": $(".cast-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".cast-card").innerWidth() / 2 + 'px'});
 }
 
-$(window).resize(function () { 
-    $(".crew-card").css({"border-top-right-radius": $(".crew-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".crew-card").innerWidth() / 2 + 'px'});
-    $(".cast-card").css({"border-top-right-radius": $(".cast-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".cast-card").innerWidth() / 2 + 'px'});
-});
+// $(window).resize(function () { 
+//     $(".crew-card").css({"border-top-right-radius": $(".crew-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".crew-card").innerWidth() / 2 + 'px'});
+//     $(".cast-card").css({"border-top-right-radius": $(".cast-card").innerWidth() / 2 + 'px', "border-top-left-radius": $(".cast-card").innerWidth() / 2 + 'px'});
+// });
 });
