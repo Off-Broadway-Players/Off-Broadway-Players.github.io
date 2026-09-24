@@ -193,5 +193,5 @@ p {
 } */
  
 .frameSpan {
-    position: relative;
+    position: absolute;
 }
