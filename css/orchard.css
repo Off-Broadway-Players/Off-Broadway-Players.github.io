@@ -181,6 +181,10 @@ p {
     padding-bottom: 0;
 }
 
+.card {
+    border: none !important;
+}
+
 .flippy {
     transform: scaleY(-1);
 }
