@@ -185,6 +185,12 @@ p {
     border: none !important;
 }
 
+.card-header {
+    background-color: transparent !important;
+    color: var(--textc) !important;
+    font-family: daveau, regalia, serif;
+}
+
 .flippy {
     transform: scaleY(-1);
 }
