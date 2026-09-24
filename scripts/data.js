@@ -164,7 +164,7 @@ function crewSetUp (place) {
         }
         place.append(cdiv); //bop it right in there
     }
-    $(".frameSpan").css({"max-height": $(".card-image-top").height() + 'px'});
+    $(".frameSpan").css({"max-height": $(".card-img-top").height() + 'px'});
     
 }
 
@@ -174,10 +174,10 @@ function castSetUp (place) {
         let aa = castMap.get(a);
         place.append(aa.createCard());
     }
-    $(".frameSpan").css({"max-height": $(".card-image-top").height() + 'px'});
+    $(".frameSpan").css({"max-height": $(".card-img-top").height() + 'px'});
 }
 
 $(window).resize(function () { 
-    $(".frameSpan").css({"max-height": $(".card-image-top").height() + 'px'});
+    $(".frameSpan").css({"max-height": $(".card-img-top").height() + 'px'});
 });
 });
