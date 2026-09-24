@@ -86,7 +86,7 @@ if($("#post-container").hasClass("crew")) { //parsing instructions for the crew 
                 postnum++;
             }
             crewSetUp($("#post-container")); //put it all together
-            $(".pic").ready(framesize);
+            $(".pic").imagesLoaded(framesize);
         },
         header: true
     }
@@ -106,6 +106,7 @@ if($("#post-container").hasClass("cast")) {
                 postnum++;
             }
             castSetUp($("#post-container")); //put it all together
+            $(".pic").imagesLoaded(framesize);
         },
         header: true
     }
