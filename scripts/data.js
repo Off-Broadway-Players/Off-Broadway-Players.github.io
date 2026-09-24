@@ -178,7 +178,7 @@ function castSetUp (place) {
 }
 
 function framesize () { 
-    $(".frameSpan").css({"max-height": $(".pic").height() + 'px'});
+    $(".frameSpan").css({"max-height": $(".pic").outerHeight() + 'px'});
 }
 
 $(window).resize(framesize);
