@@ -86,6 +86,7 @@ if($("#post-container").hasClass("crew")) { //parsing instructions for the crew 
                 postnum++;
             }
             crewSetUp($("#post-container")); //put it all together
+            $(".frameSpan").css({"max-height": $(".pic").height() + 'px'});
         },
         header: true
     }
@@ -164,7 +165,6 @@ function crewSetUp (place) {
         }
         place.append(cdiv); //bop it right in there
     }
-    $(".frameSpan").css({"max-height": $(".pic").height() + 'px'});
     
 }
 
@@ -174,7 +174,6 @@ function castSetUp (place) {
         let aa = castMap.get(a);
         place.append(aa.createCard());
     }
-    $(".frameSpan").css({"max-height": $(".pic").height() + 'px'});
 }
 
 $(window).resize(function () { 
