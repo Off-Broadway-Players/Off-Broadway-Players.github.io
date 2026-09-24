@@ -86,7 +86,7 @@ if($("#post-container").hasClass("crew")) { //parsing instructions for the crew 
                 postnum++;
             }
             crewSetUp($("#post-container")); //put it all together
-            $(".frameSpan").css({"max-height": $(".pic").height() + 'px'});
+            $(".pic").ready(framesize);
         },
         header: true
     }
@@ -176,7 +176,9 @@ function castSetUp (place) {
     }
 }
 
-$(window).resize(function () { 
+function framesize () { 
     $(".frameSpan").css({"max-height": $(".pic").height() + 'px'});
-});
+}
+
+$(window).resize(framesize);
 });
