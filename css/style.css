@@ -127,12 +127,12 @@ a:hover {
     background-color: white !important;
     border: none;
     text-transform: uppercase;
-    color: var(--bgc);
+    color: var(--textc);
     transition: transform 1s linear;
 }
 
 .read-more:hover {
-    color: #666666;
+    color: var(--bgc);
 }
 
 .posted-date {
