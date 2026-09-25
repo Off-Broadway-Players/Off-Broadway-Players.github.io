@@ -115,7 +115,7 @@ if($("#post-container").hasClass("cast")) {
 
 
 function expandCard () { 
-    $(this).parent().toggleClass("card-hidden"); //toggle hidden state
+    $(this).parent().parent().toggleClass("card-hidden"); //toggle hidden state
     // if($(this).parent().hasClass("card-hidden")) { //check for hidden state
         // $(this).parent().css("max-height", "450px"); //might change this later
         // if($(this).hasClass("read-more")) { //if clicked on 'read more'
@@ -126,7 +126,7 @@ function expandCard () {
     // } else {
         // $(this).parent().css("max-height", $(this).parent()[0].scrollHeight + "px"); //shows all
         if($(this).hasClass("read-more")) {
-            if($(this).parent().hasClass("card-hidden")) {
+            if($(this).parent().parent().hasClass("card-hidden")) {
                 $(this).prev().css("max-height", 0);
             } else {
                 $(this).prev().css("max-height", ($(this).prev()[0].scrollHeight + $(this).prev().prev()[0].scrollHeight) + "px");
@@ -136,7 +136,7 @@ function expandCard () {
             // deg = Number(deg.match(/\d+/)[0]);
             $(this).children("span").toggleClass("flippy");//.css("transform", "scaleY(" + (deg * -1) + ")"); //make read more text invisible
         } else {
-            if($(this).parent().hasClass("card-hidden")) {
+            if($(this).parent().parent().hasClass("card-hidden")) {
                 $(this).css("max-height", 0);
             } else {
                 $(this).css("max-height", $(this)[0].scrollHeight + "px");
