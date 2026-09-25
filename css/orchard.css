@@ -179,6 +179,7 @@ p {
 .card-body {
     transition: padding-top .5s ease, padding-bottom .5s ease, max-height .5s ease;
     padding-bottom: 0;
+    overflow: hidden;
 }
 
 .card {
@@ -208,4 +209,6 @@ p {
 
 .bioframe {
     background-image: url("../images/BioFrame.svg");
+    background-position: top;
+    background-size: 100% 100%;
 }
