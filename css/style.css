@@ -124,7 +124,7 @@ a:hover {
 .read-more {
     text-align: center;
     width: 100%;
-    background-color: white !important;
+    background-color: transparent !important;
     border: none;
     text-transform: uppercase;
     color: var(--textc);
