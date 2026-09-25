@@ -208,7 +208,9 @@ p {
 }
 
 .bioframe {
-    background-image: url("../images/BioFrame.svg");
-    background-position: top;
-    background-size: 100% 100%;
+    background-image: url("../images/frameside.svg"), url("../images/frametop.svg"), url("../images/framebottom.svg");
+    background-position: top, top, bottom;
+    background-size: 100% 100%, contain, contain;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
 }
