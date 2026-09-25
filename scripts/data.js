@@ -61,7 +61,7 @@ class crew {
         cbody.click(expandCard);
         let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>"));
         foot.click(expandCard);
-        cardDiv.append(ctitle, /*cfoot,*/ cbody, foot);
+        cardDiv.append($("<div></div>").addClass("bioframe").append(ctitle, cbody, foot));
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
         return wrapper;
     }
