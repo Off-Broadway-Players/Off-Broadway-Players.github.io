@@ -198,6 +198,11 @@ p {
     transform: scaleY(-1);
 }
 
+.read-more:has(> .flippy) {
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
+
 /* .ccol {
     background-image: url("../images/border.svg");
     background-size: contain;
