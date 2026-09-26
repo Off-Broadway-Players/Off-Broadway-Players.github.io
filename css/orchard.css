@@ -180,6 +180,8 @@ p {
     transition: padding-top .5s ease, padding-bottom .5s ease, max-height .5s ease;
     padding-bottom: 0;
     overflow: hidden;
+    padding-left: 1.3rem;;
+    padding-right: 1.3rem;
 }
 
 .card {
