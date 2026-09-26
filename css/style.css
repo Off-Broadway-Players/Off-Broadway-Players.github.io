@@ -128,7 +128,7 @@ a:hover {
     border: none;
     text-transform: uppercase;
     color: var(--textc);
-    transition: transform 1s linear;
+    transition: transform 1s linear, padding-top .5s linear, padding-bottom .5s linear;
 }
 
 .read-more:hover {
