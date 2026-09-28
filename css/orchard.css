@@ -101,9 +101,6 @@ p {
     font-size: .75em;
     font-style: italic;
 }
-.as::before, .as::after {
-    content: url("../images/Cherries.svg");
-}
 
 #headSVG {
     width: calc(100vw - 3rem - 8px);
