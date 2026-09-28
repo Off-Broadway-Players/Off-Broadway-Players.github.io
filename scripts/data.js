@@ -56,7 +56,7 @@ class crew {
             "src": "./images/placeholder.JPEG"//same deal
         }).addClass("d-block w-100 card-img-top p-1 pic"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
         // let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
-        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
+        let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><img src=\"./images/Cherries.svg\"><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))).css("max-height", 0);
         cbody.click(expandCard);
         let foot = $("<div></div>").addClass("card-footer read-more").append($("<span class=\"flippy\">^</span>"));
