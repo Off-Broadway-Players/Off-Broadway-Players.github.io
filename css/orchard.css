@@ -95,6 +95,8 @@ p {
 .content {
     border: 8px solid var(--textc);
     border-radius: 50vw 50vw 5px 5px !important;
+    border-top-left-radius: 50% 20rem !important;
+    border-top-right-radius: 50% 20rem !important;
 }
 
 .as {
@@ -121,14 +123,14 @@ p {
 }
 
 @media (min-width: 576px) {
-    .content{
+    .content.home{
         border-radius: 270px 270px 5px 5px!important;
     }
     #headSVG {
         width: 524px;
         height: 524px;
     }
-    .content {
+    .content.home {
         clip-path: shape(from 0% 270px,
                         arc to 100% 270px of 1% cw,
                         vline to bottom,
@@ -138,14 +140,14 @@ p {
 }
 
 @media (min-width: 768px) {
-    .content{
+    .content.home{
         border-radius: 360px 360px 5px 5px!important;
     }
     #headSVG {
         width: 704px;
         height: 704px;
     }
-    .content {
+    .content.home{
         clip-path: shape(from 0% 360px,
                         arc to 100% 360px of 1% cw,
                         vline to bottom,
@@ -155,14 +157,14 @@ p {
 }
 
 @media (min-width: 992px) {
-    .content{
+    .content.home {
         border-radius: 480px 480px 5px 5px!important;
     }
     #headSVG {
         width: 944px;
         height: 944px;
     }
-    .content {
+    .content.home {
         clip-path: shape(from 0% 480px,
                         arc to 100% 480px of 1% cw,
                         vline to bottom,
@@ -172,14 +174,14 @@ p {
 }
 
 @media (min-width: 1200px) {
-    .content{
+    .content.home{
         border-radius: 570px 570px 5px 5px!important;
     }
     #headSVG {
         width: 1124px;
         height: 1124px;
     }
-    .content {
+    .content.home{
         clip-path: shape(from 0% 570px,
                         arc to 100% 570px of 1% cw,
                         vline to bottom,
@@ -189,14 +191,14 @@ p {
 }
 
 @media (min-width: 1400px) {
-    .content{
+    .content.home{
         border-radius: 660px 660px 5px 5px!important;
     }
     #headSVG {
         width: 1304px;
         height: 1304px;
     }
-    .content {
+    .content.home{
         clip-path: shape(from 0% 660px,
                         arc to 100% 660px of 1% cw,
                         vline to bottom,
@@ -281,6 +283,6 @@ p {
 
 
 .ctitle {
-    margin-top: 1em;
-    margin-bottom: .5em;
+    margin-top: .5em;
+    margin-bottom: 0;
 }
