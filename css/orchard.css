@@ -132,13 +132,13 @@ p {
         margin-top: calc(270px - 2em);
         margin-bottom: calc(270px - 3.5em);
     }
-    #post-container {
+    .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 270px of 100% cw,
+                        arc to 100% 270px of 39% cw,
                         vline to bottom,
                         hline to left,
                         vline to 270px,
-                        arc to 50% 0% of 100% cw,
+                        arc to 50% 0% of 39% cw,
                         close);
     }
 }
@@ -155,13 +155,13 @@ p {
         margin-top: calc(360px - 2em);
         margin-bottom: calc(360px - 3.5em);
     }
-    #post-container {
+    .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 360px of 100% cw,
+                        arc to 100% 360px of 39% cw,
                         vline to bottom,
                         hline to left,
                         vline to 360px,
-                        arc to 50% 0% of 100% cw,
+                        arc to 50% 0% of 39% cw,
                         close);
     }
 }
@@ -178,13 +178,13 @@ p {
         margin-top: calc(480px - 2em);
         margin-bottom: calc(480px - 3.5em);
     }
-    #post-container {
+    .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 480px of 100% cw,
+                        arc to 100% 480px of 39% cw,
                         vline to bottom,
                         hline to left,
                         vline to 480px,
-                        arc to 50% 0% of 100% cw,
+                        arc to 50% 0% of 39% cw,
                         close);
     }
 }
@@ -201,13 +201,13 @@ p {
         margin-top: calc(570px - 2em);
         margin-bottom: calc(570px - 3.5em);
     }
-    #post-container {
+    .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 570px of 100% cw,
+                        arc to 100% 570px of 39% cw,
                         vline to bottom,
                         hline to left,
                         vline to 570px,
-                        arc to 50% 0% of 100% cw,
+                        arc to 50% 0% of 39% cw,
                         close);
     }
 }
@@ -224,7 +224,7 @@ p {
         margin-top: calc(660px - 2em);
         margin-bottom: calc(660px - 3.5em);
     }
-    #post-container {
+    .content {
         clip-path: shape(from 50% 0%,
                         arc to 100% 660px of 100% cw,
                         vline to bottom,
