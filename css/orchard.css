@@ -129,8 +129,8 @@ p {
         height: 524px;
     }
     .ctitle {
-        margin-top: calc(270px - 4em);
-        margin-bottom: calc(270px - 4em);
+        margin-top: calc(270px - 2em);
+        margin-bottom: calc(270px - 3.5em);
     }
 }
 
@@ -143,8 +143,8 @@ p {
         height: 704px;
     }
     .ctitle {
-        margin-top: calc(360px - 4em);
-        margin-bottom: calc(360px - 4em);
+        margin-top: calc(360px - 2em);
+        margin-bottom: calc(360px - 3.5em);
     }
 }
 
@@ -157,8 +157,8 @@ p {
         height: 944px;
     }
     .ctitle {
-        margin-top: calc(480px - 4em);
-        margin-bottom: calc(480px - 4em);
+        margin-top: calc(480px - 2em);
+        margin-bottom: calc(480px - 3.5em);
     }
 }
 
@@ -171,8 +171,8 @@ p {
         height: 1124px;
     }
     .ctitle {
-        margin-top: calc(570px - 4em);
-        margin-bottom: calc(570px - 4em);
+        margin-top: calc(570px - 2em);
+        margin-bottom: calc(570px - 3.5em);
     }
 }
 
@@ -185,8 +185,8 @@ p {
         height: 1304px;
     }
     .ctitle {
-        margin-top: calc(660px - 4em);
-        margin-bottom: calc(660px - 4em);
+        margin-top: calc(660px - 2em);
+        margin-bottom: calc(660px - 3.5em);
     }
 }
 
