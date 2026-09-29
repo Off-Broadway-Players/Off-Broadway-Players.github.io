@@ -226,11 +226,11 @@ p {
     }
     .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 660px of 100% cw,
+                        arc to 100% 660px of 39% cw,
                         vline to bottom,
                         hline to left,
                         vline to 660px,
-                        arc to 50% 0% of 100% cw,
+                        arc to 50% 0% of 39% cw,
                         close);
     }
 }
