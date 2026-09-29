@@ -263,3 +263,7 @@ p {
     width: 100%;
     height: 100%;
 }
+
+#post-container {
+    clip-path: url("#maska");
+}
