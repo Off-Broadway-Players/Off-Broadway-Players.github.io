@@ -75,8 +75,8 @@ body {
     background-color: var(--cbgc);
     border-radius: .375rem;
     color: var(--textc);
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 a.active{
