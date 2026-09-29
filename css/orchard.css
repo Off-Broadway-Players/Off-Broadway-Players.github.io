@@ -102,6 +102,10 @@ p {
     font-style: italic;
 }
 
+.as img {
+    height: 1em;
+}
+
 #headSVG {
     width: calc(100vw - 3rem - 8px);
     height: calc(100vw - 3rem - 8px);
