@@ -133,7 +133,7 @@ p {
                         arc to 100% 270px of 1% cw,
                         vline to bottom,
                         hline to left,
-                        close);
+                        close) border-box;
     }
 }
 
@@ -150,7 +150,7 @@ p {
                         arc to 100% 360px of 1% cw,
                         vline to bottom,
                         hline to left,
-                        close);
+                        close) border-box;
     }
 }
 
@@ -167,7 +167,7 @@ p {
                         arc to 100% 480px of 1% cw,
                         vline to bottom,
                         hline to left,
-                        close);
+                        close) border-box;
     }
 }
 
@@ -184,7 +184,7 @@ p {
                         arc to 100% 570px of 1% cw,
                         vline to bottom,
                         hline to left,
-                        close);
+                        close) border-box;
     }
 }
 
@@ -201,7 +201,7 @@ p {
                         arc to 100% 660px of 1% cw,
                         vline to bottom,
                         hline to left,
-                        close);
+                        close) border-box;
     }
 }
 
