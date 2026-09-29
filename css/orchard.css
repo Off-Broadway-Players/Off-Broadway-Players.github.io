@@ -103,7 +103,11 @@ p {
 }
 
 .as img {
-    height: 1em;
+    height: .75em;
+}
+
+.as img:last-of-type {
+    transform: scaleX(-1);
 }
 
 #headSVG {
