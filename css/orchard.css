@@ -128,10 +128,6 @@ p {
         width: 524px;
         height: 524px;
     }
-    .ctitle {
-        margin-top: calc(270px - 2em);
-        margin-bottom: calc(270px - 3.5em);
-    }
     .content {
         clip-path: shape(from 0% 270px,
                         arc to 100% 270px of 1% cw,
@@ -148,10 +144,6 @@ p {
     #headSVG {
         width: 704px;
         height: 704px;
-    }
-    .ctitle {
-        margin-top: calc(360px - 2em);
-        margin-bottom: calc(360px - 3.5em);
     }
     .content {
         clip-path: shape(from 0% 360px,
@@ -170,10 +162,6 @@ p {
         width: 944px;
         height: 944px;
     }
-    .ctitle {
-        margin-top: calc(480px - 2em);
-        margin-bottom: calc(480px - 3.5em);
-    }
     .content {
         clip-path: shape(from 0% 480px,
                         arc to 100% 480px of 1% cw,
@@ -191,10 +179,6 @@ p {
         width: 1124px;
         height: 1124px;
     }
-    .ctitle {
-        margin-top: calc(570px - 2em);
-        margin-bottom: calc(570px - 3.5em);
-    }
     .content {
         clip-path: shape(from 0% 570px,
                         arc to 100% 570px of 1% cw,
@@ -211,10 +195,6 @@ p {
     #headSVG {
         width: 1304px;
         height: 1304px;
-    }
-    .ctitle {
-        margin-top: calc(660px - 2em);
-        margin-bottom: calc(660px - 3.5em);
     }
     .content {
         clip-path: shape(from 0% 660px,
@@ -299,3 +279,8 @@ p {
     height: 100%;
 }
 
+
+.ctitle {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
