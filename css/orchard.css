@@ -104,6 +104,7 @@ p {
 
 .as img {
     height: .75em;
+    margin: 0 5px;
 }
 
 .as img:last-of-type {
