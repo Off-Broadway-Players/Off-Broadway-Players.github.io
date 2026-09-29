@@ -129,8 +129,8 @@ p {
         height: 524px;
     }
     .content .whoop{
-        clip-path: shape(from 0% 270px,
-                        arc to 100% 270px of 1% cw,
+        clip-path: shape(from 0% 262px,
+                        arc to 100% 262px of 1% cw,
                         vline to bottom,
                         hline to left,
                         close) border-box;
@@ -146,8 +146,8 @@ p {
         height: 704px;
     }
     .content .whoop {
-        clip-path: shape(from 0% 360px,
-                        arc to 100% 360px of 1% cw,
+        clip-path: shape(from 0% 352px,
+                        arc to 100% 352px of 1% cw,
                         vline to bottom,
                         hline to left,
                         close) border-box;
@@ -163,8 +163,8 @@ p {
         height: 944px;
     }
     .content .whoop {
-        clip-path: shape(from 0% 480px,
-                        arc to 100% 480px of 1% cw,
+        clip-path: shape(from 0% 472px,
+                        arc to 100% 472px of 1% cw,
                         vline to bottom,
                         hline to left,
                         close) border-box;
@@ -180,8 +180,8 @@ p {
         height: 1124px;
     }
     .content .whoop {
-        clip-path: shape(from 0% 570px,
-                        arc to 100% 570px of 1% cw,
+        clip-path: shape(from 0% 562px,
+                        arc to 100% 562px of 1% cw,
                         vline to bottom,
                         hline to left,
                         close) border-box;
@@ -197,8 +197,8 @@ p {
         height: 1304px;
     }
     .content .whoop {
-        clip-path: shape(from 0% 660px,
-                        arc to 100% 660px of 1% cw,
+        clip-path: shape(from 0% 652px,
+                        arc to 100% 652px of 1% cw,
                         vline to bottom,
                         hline to left,
                         close) border-box;
@@ -281,14 +281,16 @@ p {
 
 
 .ctitle {
-    margin-top: 1em;
+    padding-top: 1em;
     margin-bottom: .5em;
 }
 
 .whoop {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
 }
