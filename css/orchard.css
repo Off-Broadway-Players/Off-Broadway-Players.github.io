@@ -128,7 +128,7 @@ p {
         width: 524px;
         height: 524px;
     }
-    .content {
+    .content .whoop{
         clip-path: shape(from 0% 270px,
                         arc to 100% 270px of 1% cw,
                         vline to bottom,
@@ -145,7 +145,7 @@ p {
         width: 704px;
         height: 704px;
     }
-    .content {
+    .content .whoop {
         clip-path: shape(from 0% 360px,
                         arc to 100% 360px of 1% cw,
                         vline to bottom,
@@ -162,7 +162,7 @@ p {
         width: 944px;
         height: 944px;
     }
-    .content {
+    .content .whoop {
         clip-path: shape(from 0% 480px,
                         arc to 100% 480px of 1% cw,
                         vline to bottom,
@@ -179,7 +179,7 @@ p {
         width: 1124px;
         height: 1124px;
     }
-    .content {
+    .content .whoop {
         clip-path: shape(from 0% 570px,
                         arc to 100% 570px of 1% cw,
                         vline to bottom,
@@ -196,7 +196,7 @@ p {
         width: 1304px;
         height: 1304px;
     }
-    .content {
+    .content .whoop {
         clip-path: shape(from 0% 660px,
                         arc to 100% 660px of 1% cw,
                         vline to bottom,
@@ -283,4 +283,12 @@ p {
 .ctitle {
     margin-top: 1em;
     margin-bottom: .5em;
+}
+
+.whoop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
