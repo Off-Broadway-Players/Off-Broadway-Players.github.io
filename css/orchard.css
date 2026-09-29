@@ -134,11 +134,11 @@ p {
     }
     .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 270px of 39% cw,
+                        arc to 100% 270px of 50% cw,
                         vline to bottom,
                         hline to left,
                         vline to 270px,
-                        arc to 50% 0% of 39% cw,
+                        arc to 50% 0% of 50% cw,
                         close);
     }
 }
@@ -157,11 +157,11 @@ p {
     }
     .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 360px of 39% cw,
+                        arc to 100% 360px of 50% cw,
                         vline to bottom,
                         hline to left,
                         vline to 360px,
-                        arc to 50% 0% of 39% cw,
+                        arc to 50% 0% of 50% cw,
                         close);
     }
 }
@@ -180,11 +180,11 @@ p {
     }
     .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 480px of 39% cw,
+                        arc to 100% 480px of 50% cw,
                         vline to bottom,
                         hline to left,
                         vline to 480px,
-                        arc to 50% 0% of 39% cw,
+                        arc to 50% 0% of 50% cw,
                         close);
     }
 }
@@ -203,11 +203,11 @@ p {
     }
     .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 570px of 39% cw,
+                        arc to 100% 570px of 50% cw,
                         vline to bottom,
                         hline to left,
                         vline to 570px,
-                        arc to 50% 0% of 39% cw,
+                        arc to 50% 0% of 50% cw,
                         close);
     }
 }
@@ -226,11 +226,11 @@ p {
     }
     .content {
         clip-path: shape(from 50% 0%,
-                        arc to 100% 660px of 39% cw,
+                        arc to 100% 660px of 50% cw,
                         vline to bottom,
                         hline to left,
                         vline to 660px,
-                        arc to 50% 0% of 39% cw,
+                        arc to 50% 0% of 50% cw,
                         close);
     }
 }
