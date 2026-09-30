@@ -103,7 +103,9 @@ p {
     border-top-left-radius: 50% 100px !important;
     border-top-right-radius: 50% 100px !important;
 }
-
+.content.home {
+    border-radius: 50vw 50vw 5px 5px !important;
+}
 .as {
     font-size: .75em;
     font-style: italic;
@@ -119,8 +121,8 @@ p {
 }
 
 #headSVG {
-    width: calc(100vw - 3rem - 8px);
-    height: calc(100vw - 3rem - 8px);
+    width: calc(100vw - 1.5rem - 16px);
+    height: calc(100vw - 1.5rem - 16px);
     position: absolute;
     z-index: -1;
     left: 0;
