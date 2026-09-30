@@ -95,8 +95,8 @@ p {
 .content {
     border: 8px solid var(--textc);
     border-radius: 50vw 50vw 5px 5px !important;
-    border-top-left-radius: 50% 20rem !important;
-    border-top-right-radius: 50% 20rem !important;
+    border-top-left-radius: 50% 100px !important;
+    border-top-right-radius: 50% 100px !important;
 }
 
 .as {
@@ -129,6 +129,13 @@ p {
     #headSVG {
         width: 524px;
         height: 524px;
+    }
+    .ctitle{
+        font-size: 8em;
+    }
+    .content{
+        border-top-left-radius: 50% 20rem !important;
+        border-top-right-radius: 50% 20rem !important;
     }
     .content.home {
         clip-path: shape(from 0% 270px,
@@ -208,7 +215,7 @@ p {
 }
 
 .ctitle{
-    font-size: 8em;
+    font-size: 400%;
 }
 
 .read-more {
