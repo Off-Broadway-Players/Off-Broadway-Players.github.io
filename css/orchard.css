@@ -1,12 +1,12 @@
 :root {
-    --cbgc: #ffffff; /*content bg color*/
+    --cbgc: #ffede2; /*content bg color*/
     --fadet: .5;
     --linkc: #e8ce8e;
     --textc: #2d1308;
     --bgc: #ffbebc; /*outer background color*/
     --bgt: #f9d9d900; /*same hex code + 00*/
-    --navc: #999999bb; /*nav color*/
-    --navch: #99999922; /*nav color on hover*/
+    --navc: #ffede2; /*nav color*/
+    --navch: #ffffff22; /*nav color on hover*/
 }
 
 @font-face {
@@ -295,4 +295,17 @@ p {
 .ctitle {
     margin-top: 1em;
     margin-bottom: 0;
+}
+.bborder {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+li.nav-item {
+    /* background-color: var(--navc) !important; */
+    position: relative;
+    /* background-image: url("../images/buttonBorder2.svg"); */
+    background-size: 100% 100%;
 }
