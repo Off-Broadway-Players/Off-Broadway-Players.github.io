@@ -90,6 +90,7 @@ a.nav-link, .input button {
 a.nav-link:not(.active) {
     /* border: 1px solid var(--textc); */
     border-radius: 3px;
+    background-size: 100% 100%;
     background-image: url("../images/buttonBorder2.svg");
     font-family: rosehot;
 }
