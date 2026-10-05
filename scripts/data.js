@@ -22,7 +22,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
     createCard(){
         let cardDiv = $(`<div></div>`).addClass("card cast-card card-hidden");
         cardDiv.append($("<img>").attr({
-            "src": "https://www.w3schools.com/howto/img_avatar.png" //add photo functionality -> "src": this.photo
+            "src": "./images/placeholder.JPEG" //add photo functionality -> "src": this.photo
         }).addClass("d-block w-100 card-img-top pic"));
         // let cfoot = $("<div></div>").addClass("card-footer role").append(this.role); //dw about this shhh
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center")
