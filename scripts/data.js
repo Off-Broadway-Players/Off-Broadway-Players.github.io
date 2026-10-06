@@ -23,7 +23,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
         let cardDiv = $(`<div></div>`).addClass("card cast-card card-hidden");
         cardDiv.append($("<img>").attr({
             "src": "./images/placeholder.JPEG" //add photo functionality -> "src": this.photo
-        }).addClass("d-block w-100 card-img-top pic"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
+        }).addClass("d-block w-100 card-img-top p-1 pic"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
         // let cfoot = $("<div></div>").addClass("card-footer role").append(this.role); //dw about this shhh
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center")
         .append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\">as</span><br><span class=\"role\">" + this.role + "</span>"); //'title' with name and role
@@ -31,7 +31,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
         cbody.click(expandCard); //enables the "read more" functionality
         let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>"));
         foot.click(expandCard); //enables the "read more" functionality
-        cardDiv.append(ctitle, cbody, foot);
+        cardDiv.append($("<div></div>").addClass("bioframe").append(ctitle, cbody, foot));
         let wrapper = $("<div></div>").addClass("col ccol order-" + this.p).append(cardDiv); //wrapper with priority functionality
         return wrapper;
     }
