@@ -309,3 +309,10 @@ li.nav-item {
     /* background-image: url("../images/buttonBorder2.svg"); */
     background-size: 100% 100%;
 }
+
+.corners {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
