@@ -253,6 +253,7 @@ p {
     background-color: transparent !important;
     color: var(--textc) !important;
     font-family: daveau, regalia, serif;
+    border-bottom: 0;
 }
 
 .flippy {
