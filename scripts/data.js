@@ -11,7 +11,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
     constructor(i, name, photo, role, bio, p) {
         this.index = i; //so far unused, but keeping just in case
         this.name = name;
-        this.photo = photo; //image url
+        this.photo = "./images/castPhotos/" + photo; //image url
         let arr = name.split(" ");
         this.ln = arr.at(-1); //takes the last word of the name, surname if there are multiple given, first name if no surname given
         this.role = role;
@@ -22,7 +22,7 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
     createCard(){
         let cardDiv = $(`<div></div>`).addClass("card cast-card card-hidden");
         cardDiv.append($("<img>").attr({
-            "src": "./images/placeholder.JPEG" //add photo functionality -> "src": this.photo
+            "src": this.photo //add photo functionality -> "src": this.photo
         }).addClass("d-block w-100 card-img-top p-1 pic"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
         // let cfoot = $("<div></div>").addClass("card-footer role").append(this.role); //dw about this shhh
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center")
