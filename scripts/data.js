@@ -28,9 +28,10 @@ class cast { //cast [card] class. stores all info, with a method (createCard) to
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center")
         .append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\"><img src=\"./images/Cherries 2.svg\">as<img src=\"./images/Cherries 2.svg\"></span><br><span class=\"role\">" + this.role + "</span>"); //'title' with name and role
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))).css("max-height", 0); //bio, with \n functioning as line break, \" functioning as "
+        let foot = $("<div></div>").addClass("card-footer");
         if(this.bio != ""){
             cbody.click(expandCard); //enables the "read more" functionality
-            let foot = $("<div></div>").addClass("card-footer read-more").append($("<span>^</span>"));
+            foot.addClass("read-more").append($("<span>^</span>"));
             foot.click(expandCard); //enables the "read more" functionality
         }
         cardDiv.append($("<div></div>").addClass("bioframe").append(ctitle, cbody, foot));
