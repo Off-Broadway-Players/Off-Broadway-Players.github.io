@@ -63,9 +63,14 @@ class crew {
         // let cfoot = $("<div></div>").addClass("card-footer posted-date").append(this.pDate.toLocaleDateString());
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\"><img src=\"./images/Cherries 2.svg\">as<img src=\"./images/Cherries 2.svg\"></span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))).css("max-height", 0);
-        cbody.click(expandCard);
-        let foot = $("<div></div>").addClass("card-footer read-more").append($("<span class=\"flippy\">^</span>"));
-        foot.click(expandCard);
+        let foot = $("<div></div>").addClass("card-footer read-more");
+        if(this.bio != ""){
+            cbody.click(expandCard); //enables the "read more" functionality
+            foot.append($("<span>^</span>"));
+            foot.click(expandCard); //enables the "read more" functionality
+        } else {
+            foot.append("&nbsp;");
+        }
         cardDiv.append($("<div></div>").addClass("bioframe").append(ctitle, cbody, foot));
         let wrapper = $("<div></div>").addClass("col order-" + this.p).append(cardDiv);
         return wrapper;
