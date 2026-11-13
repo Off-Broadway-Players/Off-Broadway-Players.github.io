@@ -57,9 +57,13 @@ class crew {
 
     createCard(){
         let cardDiv = $(`<div></div>`).addClass("card crew-card card-hidden");
-        if (this.photo){
+        if (this.photo != ""){
             cardDiv.append($("<img>").attr({
                 "src": "./images/crew/" + this.photo//same deal
+            }).addClass("d-block w-100 card-img-top p-1 pic"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
+        } else {
+cardDiv.append($("<img>").attr({
+                "src": "./images/crew/"//same deal
             }).addClass("d-block w-100 card-img-top p-1 pic"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
         }
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\"><img src=\"./images/Cherries 2.svg\">as<img src=\"./images/Cherries 2.svg\"></span><br><span class=\"role\">" + this.role + "</span>");
