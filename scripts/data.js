@@ -62,7 +62,7 @@ class crew {
                 "src": "./images/crew/" + this.photo//same deal
             }).addClass("d-block w-100 card-img-top p-1 pic"), $("<img>").attr("src", "./images/frame.svg").addClass("frameSpan"));
         } else {
-cardDiv.append($("<div></div>").addClass("d-block w-100 card-img-top p-1 pic"));
+cardDiv.append($("<div></div>").addClass("d-block w-100 card-img-top p-1"));
         }
         let ctitle = $("<h6></h6>").addClass("card-header card-title text-center").append("<span class=\"name\">" + this.name + "</span><br><span class=\"as\"><img src=\"./images/Cherries 2.svg\">as<img src=\"./images/Cherries 2.svg\"></span><br><span class=\"role\">" + this.role + "</span>");
         let cbody = $("<div></div>").addClass("card-body").append($("<p></p>").text(this.bio.replaceAll(/\\n/g, "<br>").replaceAll(/\\"/g, '"'))).css("max-height", 0);
